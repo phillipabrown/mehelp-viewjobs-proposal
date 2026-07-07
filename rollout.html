@@ -172,7 +172,33 @@
                 }
             }
         </style>
-    </head>
+    
+        <meta name="color-scheme" content="only light">
+        <style>
+            :root{color-scheme: only light;}
+            /* MeHelp lock-screen branding (injected by brand-lockscreen.py) */
+            .staticrypt-body{background:linear-gradient(150deg,#0A9292 0%,#00B2B2 55%,#4EDAD0 100%) fixed !important;
+                font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+            .staticrypt-content{background:transparent !important;}
+            .staticrypt-page{width:auto !important;max-width:430px;padding:9vh 1.4rem 0 !important;position:relative;}
+            .staticrypt-form{border-radius:22px !important;padding:42px 38px !important;
+                box-shadow:0 18px 50px rgba(15,55,55,.35) !important;}
+            .staticrypt-title{color:#314B51;font-weight:800;line-height:1.25;}
+            .staticrypt-instructions{color:#314B51;opacity:.85;font-size:.95rem;}
+            .staticrypt-password-container{border-radius:12px;overflow:hidden;}
+            .staticrypt-form .staticrypt-decrypt-button{background:#633BA5 !important;border-radius:999px;
+                font-weight:700;letter-spacing:.05em;}
+            .staticrypt-form .staticrypt-decrypt-button:hover{filter:brightness(110%) !important;}
+            .staticrypt-remember{color:#314B51;}
+            .mh-wordmark{text-align:center;font-weight:800;font-size:1.7rem;color:#fff;margin-bottom:1.3rem;
+                letter-spacing:-.02em;}
+            .mh-wordmark b{color:#60EBDB;}
+            .mh-wordmark small{font-weight:600;font-size:1.05rem;opacity:.85;letter-spacing:0;}
+            .mh-bubble{position:fixed;border-radius:50% 50% 50% 0;background:rgba(255,255,255,.14);
+                pointer-events:none;z-index:0;}
+            .mh-footnote{text-align:center;color:rgba(255,255,255,.85);font-size:.8rem;margin-top:1.4rem;}
+        </style>
+</head>
 
     <body class="staticrypt-body">
         <div id="staticrypt_loading" class="staticrypt-spinner-container">
@@ -181,7 +207,12 @@
 
         <div id="staticrypt_content" class="staticrypt-content hidden">
             <div class="staticrypt-page">
-                <div class="staticrypt-form">
+                
+                <div class="mh-bubble" style="width:200px;height:200px;top:-50px;right:6%;transform:rotate(12deg);"></div>
+                <div class="mh-bubble" style="width:95px;height:95px;bottom:12%;right:18%;background:rgba(96,235,219,.35);transform:rotate(-8deg);"></div>
+                <div class="mh-bubble" style="width:60px;height:60px;top:28%;left:4%;background:rgba(255,255,255,.10);"></div>
+                <div class="mh-wordmark">me<b>help</b> <small>× Viewjobs</small></div>
+<div class="staticrypt-form">
                     <div class="staticrypt-instructions">
                         <p class="staticrypt-title">MeHelp × Viewjobs — Private Proposal</p>
                         <p>This proposal is confidential. Enter the access code provided by Phillipa Brown.</p>
@@ -215,6 +246,7 @@
                         <input type="submit" class="staticrypt-decrypt-button" value="Open proposal" />
                     </form>
                 </div>
+<div class="mh-footnote">Confidential proposal · MeHelp Psychology · mehelp.com.au</div>
             </div>
         </div>
 
